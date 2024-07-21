@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(49, 49, 255), rgb(5, 220, 5));
+}
+.container{
+    height: auto;
+    width: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255,0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    gap: 1.2rem;
+    padding: 2rem;
+}
+
+.addTask {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .container input,button{
+    border: none;
+    outline: none;
+  }
+.inputTask{
+    width: 100%;
+    font-size: 1rem;
+    height:2rem;
+    padding-left: 0.5rem;
+}
+
+.inputTask:focus{
+    border: 1.5px solid dodgerblue;
+}
+#addButton{
+    background-color: dodgerblue;
+    border:none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+
+#addButton:hover{
+    background-color: blue;
+}
+.deleteTask{
+    background-color: red;
+    height: auto;
+    border:none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 3rem 0.6rem;
+}
+.clear{
+    background-color: rgba(106, 81, 248,0.5);
+    border:none;
+    color: white;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+.clearAll{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.pendingTasks{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(62, 57, 57);
+    border-radius: 0.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.task > p{
+    flex: 0.93;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.6rem;
+}
+.deleteTask {
+      position: absolute;
+      top: 50%;
+      right: -45px; 
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .task:hover .deleteTask {
+        right: 0;
+      }
+      .task:hover{
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+.pendingTaskNo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pendingTaskNo>p{
+    font-size: 1.2rem;
+}
